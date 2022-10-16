@@ -1,0 +1,55 @@
+{
+    "language":"English",
+    "@language":{
+        "description":"The current language"
+    },
+    "helloMsg":"Hello, {username}",
+    "@helloMsg":{
+        "description":"The main hello msg",
+        "placeholders":{
+            "username": {
+                "type": "String"
+            }
+        }
+    },
+    "balance":"Balance",
+    "@balance":{
+        "description":"The balance account msg"
+    },
+    "bill":"Bill",
+    "@bill":{
+        "description":"The bill msg"
+    },
+    "statistics":"Statistics",
+    "@statistics":{
+        "description":"The statistics msg"
+    },
+    "statisticsText":"payment and income",
+    "@statisticsText":{
+        "description":"The statisticsText msg"
+    },
+    "transactions":"Transactions",
+    "@transactions":{
+        "description":"The transactions msg"
+    },
+    "transactionsText":"transactions history",
+    "@transactionsText":{
+        "description":"The transactionsText msg"
+    },
+    "password":"password",
+    "@password":{
+        "description":"The password msg"
+    },
+    "phone":"phone",
+    "@phone":{
+        "description":"The phone msg"
+    },
+    "login":"LOGIN",
+    "@login":{
+        "description":"The phone msg"
+    },
+    "send":"Send",
+    "@send":{
+        "description":"The send money to account msg"
+    }
+}

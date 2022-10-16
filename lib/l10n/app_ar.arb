@@ -1,0 +1,14 @@
+{
+    "language":"العربية",
+    "helloMsg":"اهلا, {username}",
+    "balance":"الرصيد",
+    "bill":"فاتورة",
+    "send":"إرسال",
+    "statistics":"إحصائيات",
+    "statisticsText":"الدفع والدخل",
+    "transactions":"المعاملات",
+    "transactionsText":"تاريخ المعاملة",
+    "password":"كلمه السر",
+    "phone":"الهاتف",
+    "login":"تسجيل الدخول"
+}

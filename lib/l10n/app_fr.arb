@@ -1,0 +1,14 @@
+{
+    "language":"Francais",
+    "helloMsg":"Bonjour, {username}",
+    "balance":"Solde",
+    "bill":"Facture",
+    "send":"Envoyer",
+    "statistics":"Statistiques",
+    "statisticsText":"paiement et revenu",
+    "transactions":"Transactions",
+    "transactionsText":"historique des transactions",
+    "password":"Mot de passe",
+    "phone":"téléphone",
+    "login":"CONNECTER"
+}
