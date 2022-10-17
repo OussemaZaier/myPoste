@@ -10,5 +10,12 @@
     "transactionsText":"historique des transactions",
     "password":"Mot de passe",
     "phone":"téléphone",
+    "account":"Compte",
+    "notification":"Notifications",
+    "privacy":"sécurité",
+    "support":"Aide et soutien",
+    "about":"À propos",
+    "logout":"Déconnecter",
+    "settings":"RÉGLAGES",
     "login":"CONNECTER"
 }

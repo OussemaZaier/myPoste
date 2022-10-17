@@ -1,9 +1,11 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter_gen/gen_l10n/main.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:my_bank/main.dart';
+import 'package:my_bank/settings.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
 import 'bigButtons.dart';
@@ -61,7 +63,20 @@ class _MyHomePageState extends State<MyHomePage> {
                 ),
               ),
               IconButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const Settings(),
+                    ),
+                  );
+                  // async
+                  // try {
+                  //   await FirebaseAuth.instance.signOut();
+                  // } catch (e) {
+                  //   print(e.toString());
+                  // }
+                },
                 icon: Icon(
                   Icons.settings,
                   size: 32,

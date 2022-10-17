@@ -10,5 +10,12 @@
     "transactionsText":"تاريخ المعاملة",
     "password":"كلمه السر",
     "phone":"الهاتف",
+    "account":"الحساب",
+    "notification":"إشعارات",
+    "privacy":"الخصوصية والأمن",
+    "support":"مساعدة و دعم",
+    "about":"حول التطبيق",
+    "logout":"تسجيل الخروج",
+    "settings":"الإعدادات",
     "login":"تسجيل الدخول"
 }

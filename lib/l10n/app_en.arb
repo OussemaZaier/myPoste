@@ -48,6 +48,34 @@
     "@login":{
         "description":"The phone msg"
     },
+    "settings":"SETTINGS",
+    "@settings":{
+        "description":"The settings msg"
+    },
+    "account":"Account",
+    "@account":{
+        "description":"The account msg"
+    },
+    "notification":"Notifications",
+    "@notification":{
+        "description":"The notification msg"
+    },
+    "privacy":"Privacy & Security",
+    "@privacy":{
+        "description":"The privacy msg"
+    },
+    "support":"Help and Support",
+    "@support":{
+        "description":"The support msg"
+    },
+    "about":"About",
+    "@about":{
+        "description":"The about msg"
+    },
+    "logout":"LogOut",
+    "@logout":{
+        "description":"The logout msg"
+    },
     "send":"Send",
     "@send":{
         "description":"The send money to account msg"
