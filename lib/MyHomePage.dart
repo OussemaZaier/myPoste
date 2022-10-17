@@ -70,12 +70,6 @@ class _MyHomePageState extends State<MyHomePage> {
                       builder: (context) => const Settings(),
                     ),
                   );
-                  // async
-                  // try {
-                  //   await FirebaseAuth.instance.signOut();
-                  // } catch (e) {
-                  //   print(e.toString());
-                  // }
                 },
                 icon: Icon(
                   Icons.settings,

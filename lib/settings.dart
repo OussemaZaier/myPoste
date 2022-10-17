@@ -1,3 +1,4 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/widgets/framework.dart';
@@ -90,8 +91,12 @@ class Settings extends StatelessWidget {
                   ),
                   settingItem(
                     iconName: Icons.logout,
-                    fct: () {
-                      print('clicked logout');
+                    fct: () async {
+                      try {
+                        await FirebaseAuth.instance.signOut();
+                      } catch (e) {
+                        print(e.toString());
+                      }
                     },
                     name: AppLocalizations.of(context)!.logout,
                     logOut: true,
