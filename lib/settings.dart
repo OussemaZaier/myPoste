@@ -4,6 +4,7 @@ import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter_gen/gen_l10n/main.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
+import 'package:my_bank/main.dart';
 import 'settingItem.dart';
 
 class Settings extends StatelessWidget {
@@ -97,6 +98,11 @@ class Settings extends StatelessWidget {
                       } catch (e) {
                         print(e.toString());
                       }
+                      Navigator.pushAndRemoveUntil(context, MaterialPageRoute(
+                        builder: (BuildContext context) {
+                          return MyApp();
+                        },
+                      ), (route) => false);
                     },
                     name: AppLocalizations.of(context)!.logout,
                     logOut: true,
