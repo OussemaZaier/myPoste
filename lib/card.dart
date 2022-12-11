@@ -3,16 +3,14 @@ import 'package:flutter/material.dart';
 class cardWidget extends StatelessWidget {
   final double balance;
   final int lastThreeCardNumbers;
-  final int expMonth;
-  final int expYear;
+  final String expDate;
   final int imgId;
   final String balanceText;
   const cardWidget(
       {Key? key,
       required this.balance,
       required this.lastThreeCardNumbers,
-      required this.expMonth,
-      required this.expYear,
+      required this.expDate,
       required this.balanceText,
       required this.imgId})
       : super(key: key);
@@ -69,7 +67,7 @@ class cardWidget extends StatelessWidget {
                     ),
                   ),
                   Text(
-                    '${expMonth}/${expYear}',
+                    '${expDate}',
                     style: TextStyle(
                       fontSize: 20,
                       color: Colors.white,

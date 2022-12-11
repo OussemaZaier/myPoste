@@ -5,6 +5,8 @@ import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:flutter_gen/gen_l10n/main.dart';
 import 'package:my_bank/MyHomePage.dart';
+import 'package:my_bank/signup.dart';
+import 'package:rflutter_alert/rflutter_alert.dart';
 
 class Login extends StatefulWidget {
   const Login({Key? key}) : super(key: key);
@@ -120,6 +122,20 @@ class _LoginState extends State<Login> {
                   onPressed: SignInMethod,
                   child: Text(AppLocalizations.of(context)!.login),
                 ),
+                InkWell(
+                  child: Text(
+                    AppLocalizations.of(context)!.noacc,
+                    style: TextStyle(fontSize: 20, color: Colors.red.shade200),
+                  ),
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const SignUp(),
+                      ),
+                    );
+                  },
+                ),
               ],
             ),
           ),
@@ -129,13 +145,84 @@ class _LoginState extends State<Login> {
   }
 
   Future SignInMethod() async {
-    try {
-      await FirebaseAuth.instance.signInWithEmailAndPassword(
-        email: emailController.text.trim(),
-        password: passwordController.text.trim(),
-      );
-    } on FirebaseAuthException catch (e) {
-      print(e);
+    if (passwordController.text.isEmpty) {
+      Alert(
+        context: context,
+        title: AppLocalizations.of(context)!.alert,
+        desc: AppLocalizations.of(context)!.empty,
+        image: Image.asset(
+          "lib/img/delete.png",
+          height: 100,
+        ),
+        buttons: [
+          DialogButton(
+            onPressed: () => Navigator.pop(context),
+            child: Text(
+              AppLocalizations.of(context)!.cancel,
+              style: TextStyle(
+                color: Colors.white,
+                fontSize: 20,
+              ),
+            ),
+          )
+        ],
+      ).show();
+    } else {
+      try {
+        await FirebaseAuth.instance.signInWithEmailAndPassword(
+          email: emailController.text.trim(),
+          password: passwordController.text.trim(),
+        );
+      } on FirebaseAuthException catch (e) {
+        if (e.code == "invalid-email") {
+          Alert(
+            context: context,
+            title: AppLocalizations.of(context)!.alert,
+            desc: AppLocalizations.of(context)!.validate,
+            image: Image.asset(
+              "lib/img/delete.png",
+              height: 100,
+            ),
+            buttons: [
+              DialogButton(
+                onPressed: () => Navigator.pop(context),
+                child: Text(
+                  AppLocalizations.of(context)!.cancel,
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 20,
+                  ),
+                ),
+              )
+            ],
+          ).show();
+        } else if (e.code == "wrong-password" || e.code == "user-not-found") {
+          Alert(
+            context: context,
+            title: AppLocalizations.of(context)!.alert,
+            desc: AppLocalizations.of(context)!.unfound,
+            image: Image.asset(
+              "lib/img/delete.png",
+              height: 100,
+            ),
+            buttons: [
+              DialogButton(
+                onPressed: () => Navigator.pop(context),
+                child: Text(
+                  AppLocalizations.of(context)!.cancel,
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 20,
+                  ),
+                ),
+              )
+            ],
+          ).show();
+        }
+        // print(e.code);
+        // print("*************");
+        // print(e.message);
+      }
     }
 
     // Navigator.push(

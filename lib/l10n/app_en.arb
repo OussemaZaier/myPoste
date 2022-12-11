@@ -76,6 +76,74 @@
     "@logout":{
         "description":"The logout msg"
     },
+    "add":"Add new card",
+    "@add":{
+        "description":"The add msg"
+    },
+    "cardNumber":"Card number",
+    "@cardNumber":{
+        "description":"The cardNumber msg"
+    },
+    "exp":"Expiry date",
+    "@exp":{
+        "description":"The exp msg"
+    },
+    "cvc":"CVC/CVV",
+    "@CVC":{
+        "description":"The cvc msg"
+    },
+    "cin":"identity card number",
+    "@cin":{
+        "description":"The cin msg"
+    },
+    "alert":"ALERT",
+    "@alert":{
+        "description":"The alert msg"
+    },
+    "cancel":"CANCEL",
+    "@cancel":{
+        "description":"The cancel msg"
+    },
+    "empty":"email and password field can't be empty",
+    "@empty":{
+        "description":"The empty msg"
+    },
+    "validate":"not a validate email format",
+    "@validate":{
+        "description":"The validate msg"
+    },
+    "unfound":"user unfound",
+    "@unfound":{
+        "description":"The unfound msg"
+    },
+    "signup":"sign up",
+    "@signup":{
+        "description":"The signup msg"
+    },
+    "noacc":"If you don't have an account, sign up here",
+    "@noacc":{
+        "description":"The noacc msg"
+    },
+    "nullfield":"All the fields are required",
+    "@noacc":{
+        "description":"The nullfield msg"
+    },
+    "sendmon":"Send money",
+    "@sendmon":{
+        "description":"The nullfield msg"
+    },
+    "amount":"amount",
+    "@sendmon":{
+        "description":"The amount msg"
+    },
+    "added":"card added successfully",
+    "@added":{
+        "description":"The added msg"
+    },
+    "invalid":"invalid phone number. must have 8-digits",
+    "@invalid":{
+        "description":"The invalid msg"
+    },
     "send":"Send",
     "@send":{
         "description":"The send money to account msg"

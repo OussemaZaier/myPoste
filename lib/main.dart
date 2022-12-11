@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:month_year_picker/month_year_picker.dart';
 import 'MyHomePage.dart';
 import 'check.dart';
 import 'l10n/l10n.dart';
@@ -49,6 +50,7 @@ class _MyAppState extends State<MyApp> {
         GlobalMaterialLocalizations.delegate,
         GlobalCupertinoLocalizations.delegate,
         GlobalWidgetsLocalizations.delegate,
+        MonthYearPickerLocalizations.delegate,
       ],
       locale: _locale,
       debugShowCheckedModeBanner: false,
